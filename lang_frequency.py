@@ -4,6 +4,7 @@ import sys
 
 number_of_printed_words = 10
 
+
 def load_data(filepath):
     with open(filepath) as filepointer:
         return filepointer.read()
@@ -13,6 +14,7 @@ def get_most_frequent_words(text):
     words = re.findall(r"\w+", text.lower())
     words_counter = Counter(words)
     return words_counter.most_common(number_of_printed_words)
+
 
 if __name__ == '__main__':
     try:
